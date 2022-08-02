@@ -3,6 +3,7 @@ import Board from './pages/board';
 import Login from './pages/forms/Login';
 import Signup from './pages/forms/Signup';
 import { Route, Routes, BrowserRouter } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <BrowserRouter>
