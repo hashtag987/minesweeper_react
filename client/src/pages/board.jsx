@@ -11,9 +11,9 @@ import "./boardstyle.scss";
 const Board = () => {
   
   const setupData = {
-    width: 5,
-    height: 5,
-    mines: 5,
+    width: 15,
+    height: 15,
+    mines: 30,
   };
 
   const dialogs=["Too Soon uh??","Focus Focus Focus!!","You've come this far","Little bit Concentration!!","You're Kidding right?","Seriously?",

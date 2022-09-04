@@ -27,6 +27,7 @@ const Login = () => {
       const { data: res } = await axios.post(url, data);
       //localStorage.setItem("token", res.data);
       //window.location = "/";
+      console.log(res.name)
       navigate("/board");
     } catch (error) {
       console.log(error.response.data.message);
@@ -44,18 +45,18 @@ const Login = () => {
     <div className="main">
       <h3 className="logo">MINESWEEPER</h3>
       <div className="box-form">
-        <div class="inner-box">
-          <img src={logger} class="carousel-login" />
-          <div class="forms-wrap-login">
+        <div className="inner-box">
+          <img src={logger} className="carousel-login" />
+          <div className="forms-wrap-login">
             <form onSubmit={handleSubmit}>
-              <div class="heading">
+              <div className="heading">
                 <h2>Hello there, Miner</h2>
                 <h6>Not registred yet? </h6>
                 <Link to="/signup" className="toggle">
                   Sign up
                 </Link>
               </div>
-              <div class="actual-form">
+              <div className="actual-form">
                 <div className="input-wrap">
                   <input
                     type="email"
@@ -72,7 +73,7 @@ const Login = () => {
                   <input
                     type="password"
                     className="input-field"
-                    autocomplete="off"
+                    autoComplete="off"
                     placeholder="Password"
                     name="password"
                     onChange={handleChange}
@@ -80,10 +81,10 @@ const Login = () => {
                     required
                   />
                 </div>
-                <input type="submit" value="Sign In" class="sign-btn" />
+                <input type="submit" value="Sign In" className="sign-btn" />
               </div>
             </form>
-            {/* <img src={logger} class="carousel-login"/> */}
+            {/* <img src={logger} className="carousel-login"/> */}
           </div>
         </div>
       </div>
